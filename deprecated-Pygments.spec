@@ -6,7 +6,7 @@
 #
 Name     : deprecated-Pygments
 Version  : 2.2.0
-Release  : 49
+Release  : 50
 URL      : http://pypi.debian.net/Pygments/Pygments-2.2.0.tar.gz
 Source0  : http://pypi.debian.net/Pygments/Pygments-2.2.0.tar.gz
 Source99 : http://pypi.debian.net/Pygments/Pygments-2.2.0.tar.gz.asc
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554326148
+export SOURCE_DATE_EPOCH=1554341409
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -87,7 +87,7 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/pygmentize
+%exclude /usr/bin/pygmentize
 
 %files legacypython
 %defattr(-,root,root,-)
